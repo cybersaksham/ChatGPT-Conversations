@@ -1,18 +1,16 @@
 ## Complete discussion on how to set manifest for urls containing video
 
-> when someone share youtube video link on whatsapp then complete video can be wathced in whatsapp itself. how to do it for my app
-
----
+<details>
+<summary> when someone share youtube video link on whatsapp then complete video can be wathced in whatsapp itself. how to do it for my app</summary>
 
 To embed a YouTube video in your app, you can use the YouTube Android Player API. This API allows you to embed YouTube videos in your app and control playback.
 
 Here are the general steps to embed a YouTube video in
 
----
+</details>
 
-> No i have a similir app like youtube. when i share link to video of my app it should do the same behaviour as youtube
-
----
+<details>
+<summary> No i have a similir app like youtube. when i share link to video of my app it should do the same behaviour as youtube</summary>
 
 I see, in order to implement the behavior where a video from your app can be watched directly within WhatsApp, you can add support for WhatsApp's rich media link preview feature.
 
@@ -24,11 +22,10 @@ Once you've added the Open Graph tags to your site, you can test the link previe
 
 It's worth noting that this behavior is dependent on WhatsApp's implementation of rich media link previews, and may not work in all cases or on all devices. Additionally, some users may prefer to open the link in a separate browser window or within your app itself, so it's a good idea to provide options for both.
 
----
+</details>
 
-> given some example to add this
-
----
+<details>
+<summary> given some example to add this</summary>
 
 Sure, here's an example of how you can add Open Graph metadata tags to your app's video pages:
 
@@ -70,11 +67,10 @@ You should replace the example values with the actual values for your video. You
 
 Once you've added the Open Graph tags, you can test the link preview by sharing the video URL on WhatsApp. If everything is set up correctly, the link preview should show the video thumbnail, title, and description, and tapping on the link should take the user directly to your app's video player.
 
----
+</details>
 
-> but my data is getting fetched from api so details of video will not be availabel immediately
-
----
+<details>
+<summary> but my data is getting fetched from api so details of video will not be availabel immediately</summary>
 
 If your app fetches video data from an API and the video details are not available immediately, you can still use Open Graph tags to generate a link preview. However, you may need to generate the Open Graph tags dynamically, once you have the video details from your API.
 
@@ -89,11 +85,10 @@ Here's an example of how you could use server-side rendering to generate Open Gr
 
 Alternatively, you could use a client-side rendering approach, where you generate the Open Graph tags on the client side once you have the video details. In this approach, you would use JavaScript to generate the HTML for the video page and include the Open Graph tags in the HTML. However, this approach may not work as reliably as server-side rendering, since WhatsApp may not execute the JavaScript on the client side when generating the link preview.
 
----
+</details>
 
-> implement
-
----
+<details>
+<summary> implement</summary>
 
 Sure, here's an example of how you can generate Open Graph tags dynamically on the server-side using Node.js:
 
@@ -170,11 +165,10 @@ Once the HTML is generated, it is sent back to the client as a response to the o
 
 This is just a basic example to get you started. Depending on your specific needs, you may need to modify the code to suit your app's architecture and requirements.
 
----
+</details>
 
-> implement client side
-
----
+<details>
+<summary> implement client side</summary>
 
 Sure, here's an example of how you can generate Open Graph tags dynamically on the client-side using JavaScript:
 
@@ -187,11 +181,10 @@ Sure, here's an example of how you can generate Open Graph tags dynamically on t
     <meta name="viewport" content="width=device-width, initial-scale
 ```
 
----
+</details>
 
-> implement client side in react
-
----
+<details>
+<summary> implement client side in react</summary>
 
 Sure, here's an example of how you can generate Open Graph tags dynamically on the client-side using React:
 
@@ -262,4 +255,4 @@ Finally, the component renders the video page using the fetched video data.
 
 Note that this approach relies on JavaScript to generate the Open Graph tags, which may not work reliably if WhatsApp does not execute JavaScript when scraping the link. In that case, you may need to use a server-side rendering approach instead.
 
----
+</details>

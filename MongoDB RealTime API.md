@@ -2,9 +2,8 @@
 
 ## Frontend can be in react or flutter
 
-> I want to use express js and mongodb in node js for backend and flutter for front-end in app Write code to implement realtime api fetching
-
----
+<details>
+<summary> I want to use express js and mongodb in node js for backend and flutter for front-end in app Write code to implement realtime api fetching</summary>
 
 Sure, here's an example of how to implement a realtime API fetching using Express.js and MongoDB in Node.js:
 
@@ -129,11 +128,10 @@ Future<List<dynamic>> fetchData() async {
 
 Note: This example code is for demonstration purposes only and may need to be adapted to fit your specific use case.
 
----
+</details>
 
-> But this will fetch only once i want to listen whenever database changes
-
----
+<details>
+<summary> But this will fetch only once i want to listen whenever database changes</summary>
 
 To listen for changes to the database in real-time, you can use MongoDB's change streams feature. Here's an example of how to modify the previous code to use change streams:
 
@@ -207,11 +205,10 @@ wss.on("connection", (ws) => {
 });
 ```
 
----
+</details>
 
-> Use listenForData() function in a flutter widget to show data in realtime. Write only required code
-
----
+<details>
+<summary> Use listenForData() function in a flutter widget to show data in realtime. Write only required code</summary>
 
 Here's an example of how to use the `listenForData()` function to show data in real-time in a Flutter widget:
 
@@ -282,11 +279,10 @@ In the `build()` method, the `StreamBuilder` widget is used to build the list of
 
 Note: In order to use this widget, you'll need to import the `dart:convert` package and add the `web_socket_channel` package to your pubspec.yaml file.
 
----
+</details>
 
-> Write code in react also to call at same api, fetch data in realtime and show it
-
----
+<details>
+<summary> Write code in react also to call at same api, fetch data in realtime and show it</summary>
 
 Here's an example of how to use `WebSocket` in React to fetch data in real-time from the same API and display it:
 
@@ -350,11 +346,10 @@ In the `return` statement, the `error` and `data` state variables are checked to
 
 Note: In order to use this code, you'll need to import the `socket.io-client` package using `npm` or `yarn`. You'll also need to make sure that your server is configured to allow WebSocket connections.
 
----
+</details>
 
-> Is it secure to use id in key of map elements. Can someone use this id to change database
-
----
+<details>
+<summary> Is it secure to use id in key of map elements. Can someone use this id to change database</summary>
 
 It is generally considered safe to use the `id` of a database record as the key of a map element in a React component, as long as you take certain precautions to prevent malicious users from modifying the database.
 
@@ -364,4 +359,4 @@ Secondly, you should validate any user input that is sent to your server to prev
 
 Thirdly, you should make sure that your server is properly secured and configured to prevent unauthorized access. This
 
----
+</details>

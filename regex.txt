@@ -1,0 +1,2 @@
+\n>(.*)\n\n---((.*\n)*?)---
+<details>\n<summary>$1</summary>$2\n</details>\n

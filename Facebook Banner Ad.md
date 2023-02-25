@@ -1,8 +1,7 @@
 ## Showing facebook banner add in flutter
 
-> Write flutter code to show facebook ads as a banner
-
----
+<details>
+<summary> Write flutter code to show facebook ads as a banner</summary>
 
 To show Facebook ads as a banner in your Flutter app, you'll first need to set up the Facebook Audience Network SDK by following the instructions in the Facebook documentation. Once you have the SDK integrated, you can use the following code to show the banner ad:
 
@@ -57,11 +56,10 @@ Replace `'YOUR_PLACEMENT_ID'` with the actual placement ID for your Facebook ban
 
 Note that you need to initialize the Facebook Audience Network SDK before loading the banner ad, which is done in the `initState` method of the stateful widget. The `FacebookBannerAd` widget takes care of loading and displaying the banner ad, and provides a listener callback that you can use to track ad events.
 
----
+</details>
 
-> How to get placment id
-
----
+<details>
+<summary> How to get placment id</summary>
 
 To get the placement ID for your Facebook ad, you'll need to create a new placement in the Facebook Audience Network dashboard. Here's how:
 
@@ -74,4 +72,4 @@ To get the placement ID for your Facebook ad, you'll need to create a new placem
 
 Note that you'll need to have a Facebook developer account and your app must be registered with Facebook in order to create an ad placement.
 
----
+</details>

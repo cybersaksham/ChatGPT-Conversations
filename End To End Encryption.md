@@ -1,8 +1,7 @@
 ## Complete discussion about end to end encryption in flutter
 
-> What tech stack does whatsapp uses
-
----
+<details>
+<summary> What tech stack does whatsapp uses</summary>
 
 WhatsApp uses a combination of technologies for its tech stack, including:
 
@@ -14,11 +13,10 @@ WhatsApp uses a combination of technologies for its tech stack, including:
 
 Overall, WhatsApp's tech stack is designed to provide a fast, reliable, and secure messaging experience for its users.
 
----
+</details>
 
-> I have to send message to some person. Write code to acheive end to end encryption
-
----
+<details>
+<summary> I have to send message to some person. Write code to acheive end to end encryption</summary>
 
 To achieve end-to-end encryption for sending a message to a person, you can use a cryptographic library such as OpenSSL to generate a public-private key pair for both the sender and the recipient. Here is an example of how you could use OpenSSL in Python to encrypt a message using the recipient's public key:
 
@@ -54,11 +52,10 @@ In this example, we first generate a public-private key pair for both the sender
 
 This example demonstrates how you can use encryption to achieve end-to-end encryption for sending a message to a person. However, in a real-world scenario, you would also need to consider other factors such as key management, secure message delivery, and user authentication.
 
----
+</details>
 
-> What is a good way to save keys for all of my users
-
----
+<details>
+<summary> What is a good way to save keys for all of my users</summary>
 
 If you are building an application that requires encryption and needs to store keys for all of your users, there are a few best practices you can follow to ensure the security of your users' keys:
 
@@ -70,11 +67,10 @@ If you are building an application that requires encryption and needs to store k
 
 By following these best practices, you can ensure the security of your users' keys and protect against potential security threats.
 
----
+</details>
 
-> Can i store public keys in mongodb and private keys in users phone storage when he get logged in and when i need to send message, i will encrypt it will public key stored in database then send to user and at users phone level decrypt it will private key Is this method secure
-
----
+<details>
+<summary> Can i store public keys in mongodb and private keys in users phone storage when he get logged in and when i need to send message, i will encrypt it will public key stored in database then send to user and at users phone level decrypt it will private key Is this method secure</summary>
 
 Storing public keys in a database and private keys on a user's device can be a secure approach to end-to-end encryption if implemented properly. Here are some considerations:
 
@@ -86,11 +82,10 @@ Storing public keys in a database and private keys on a user's device can be a s
 
 Overall, storing public keys in a database and private keys on a user's device can be a secure approach to end-to-end encryption if implemented properly and following best practices.
 
----
+</details>
 
-> Write code in flutter to generate key pair, then store public key on database and private key on device in encrypted form
-
----
+<details>
+<summary> Write code in flutter to generate key pair, then store public key on database and private key on device in encrypted form</summary>
 
 Here is an example of how to generate a key pair in Flutter using the `pointycastle` library, store the public key in a database, and store the private key on the device in encrypted form using the `flutter_secure_storage` library:
 
@@ -175,11 +170,10 @@ class AesHelper {
     return
 ```
 
----
+</details>
 
-> Write remaining code
-
----
+<details>
+<summary> Write remaining code</summary>
 
 ```dart
 }
@@ -212,11 +206,10 @@ Future<String> getDecryptedPrivateKey() async {
 
 Note that you will need to securely store the encryption key and IV used by `AesHelper`, such as using the `flutter_secure_storage` library or the Android KeyStore and iOS Keychain. Also, this is just an example implementation and you may need to customize it to fit your specific use case and security requirements.
 
----
+</details>
 
-> Does key and iv are already present in secure sotrage package
-
----
+<details>
+<summary> Does key and iv are already present in secure sotrage package</summary>
 
 Yes, the `flutter_secure_storage` package provides a way to securely store keys and other sensitive information on both iOS and Android. It uses platform-specific keychains (Keychain on iOS and Keystore on Android) to store data in an encrypted form, which provides additional protection against attacks like jailbreaking or rooting.
 
@@ -252,11 +245,10 @@ Future<String> getEncryptionIv() async {
 
 In the above example, the `storeKeyAndIv` function stores the encryption key and IV in `flutter_secure_storage`, while the `getEncryptionKey` and `getEncryptionIv` functions retrieve them. You can then use these values with your encryption and decryption code as needed.
 
----
+</details>
 
-> How cany i get encryption key and iv to store in storage
-
----
+<details>
+<summary> How cany i get encryption key and iv to store in storage</summary>
 
 There are different ways to generate a secure encryption key and IV in Flutter, depending on your specific needs and security requirements. Here are two examples:
 
@@ -317,11 +309,10 @@ In this example, the `generateEncryptionKey` function uses the `KeyGenerator` cl
 
 Note that both of these examples generate a new key and IV each time they are called, which may be appropriate for some use cases. However, in other cases you may want to generate a key and IV once and reuse them for all messages. Additionally, you will need to securely store the generated key and IV using a secure storage solution like `flutter_secure_storage` as described in my previous answer.
 
----
+</details>
 
-> But these key and iv will change everytime i call these functions so private key will not be decrypted correctly
-
----
+<details>
+<summary> But these key and iv will change everytime i call these functions so private key will not be decrypted correctly</summary>
 
 You're correct that generating a new encryption key and IV for each message will not work for decryption, as the recipient will need to use the same key and IV to decrypt the message that was used to encrypt it.
 
@@ -349,11 +340,10 @@ Future<void> generateAndStoreKeys() async {
   final encryptionKey = hex.encode(keyBytes);
 ```
 
----
+</details>
 
-> Can i check that there is a key and iv already stored then dont call generate else call generate Is it better
-
----
+<details>
+<summary> Can i check that there is a key and iv already stored then dont call generate else call generate Is it better</summary>
 
 Yes, it's a good idea to check if a key and IV are already stored before generating new ones. This way, you can avoid overwriting existing keys and IVs and ensure that you always use the same values for encryption and decryption.
 
@@ -393,11 +383,10 @@ In this example, the `generateAndStoreKeys` function first reads the stored valu
 
 Note that you will need to call `generateAndStoreKeys` once when the user logs in or creates an account, and then use the same key and IV for all subsequent messages.
 
----
+</details>
 
-> To rotate the keys i can also add generation time and regenrate after specific time let say 2 days
-
----
+<details>
+<summary> To rotate the keys i can also add generation time and regenrate after specific time let say 2 days</summary>
 
 Yes, that's a good idea. By adding a generation time and regenerating the key and IV after a specific period (e.g., 2 days), you can improve the security of your system by reducing the amount of time an attacker has to compromise the keys.
 
@@ -442,11 +431,10 @@ In this updated example, the `generateAndStoreKeys` function checks the stored `
 
 With this update, your app will automatically generate new keys and IVs every 2 days to improve the security of your system.
 
----
+</details>
 
-> In which fields end to end cryption should be followed and in which should not
-
----
+<details>
+<summary> In which fields end to end cryption should be followed and in which should not</summary>
 
 End-to-end encryption (E2EE) is a security protocol that encrypts messages on the sender's device and can only be decrypted by the intended recipient's device. In general, E2EE should be used in any communication that involves sensitive or private information that should not be accessible to anyone other than the sender and intended recipient. Here are some examples:
 
@@ -463,4 +451,4 @@ However, there are some situations where E2EE may not be necessary or appropriat
 
 Overall, E2EE should be used in any situation where the privacy and security of the data being communicated is important and sensitive.
 
----
+</details>
