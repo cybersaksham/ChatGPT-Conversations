@@ -1,4 +1,4 @@
-## Showing facebook banner add in flutter
+## Showing facebook banner ad in flutter
 
 <details>
 <summary> Write flutter code to show facebook ads as a banner</summary>
